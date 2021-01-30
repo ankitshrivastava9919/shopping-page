@@ -1,0 +1,158 @@
+<!doctype <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>all products-redstore</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="NEW.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,400;0,700;1,200&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+</head>
+
+<body>
+            <div class="searchbox">
+                <input class="searchtext" type="text " name="" placeholder="type to search">
+                <a class="search-btn" href="account.html">
+                <i class="fas fa-search" ></i>
+            </a>
+            </div>
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="logo.png" width="100px" ;>
+                </div>
+                <nav>
+                    <ul id="menuitems">
+                        <li><a href="index.html">home</a></li>
+                        <li><a href="products.html">products</a></li>
+                        <li><a href="#">about</a></li>
+                        <li><a href="#">contact</a></li>
+                        <li><a href="account.html">acount</a></li>
+                    </ul>
+                </nav>
+                <a href="cart.html">
+                <img src="cart.png" alt="" width="30px" height="30px">
+                </a>
+                <img src="menu.png" alt="" class="menuicon" onclick="menutoggle()">
+            </div>
+        </div>
+
+        <!------------acoount page----->
+
+        <div class="accountpage">
+            <div class="container">
+                <div class="row">
+                    <div class="col2">
+                        <img src="image1.png" alt="" width="100%">
+                    </div>
+                    <div class="col2">
+                        <div class="form-container">
+                            <div class="formbtn">
+                                <span onclick="login()">login</span>
+                                <span onclick="register()">register</span>
+                                 <hr id="indicator"/>
+                            </div>
+
+                            <form id="loginform">
+                                <input type="text" placeholder="Username">
+                                <input type="password" placeholder="password">
+                                <button type="submit" class="btn">login</button>
+                                <a href="">forget password</a>
+                            </form>
+
+                            <form id="regform">
+                                <input type="text" placeholder="Username">
+                                <input type="email" placeholder="email">
+                                <input type="password" placeholder="password">
+                                <button type="submit" class="btn">register</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!---------FOTTER SECTION-->
+    <div class="footer">
+        <div class="smallcontainer">
+         <div class="row">
+            <div class="footer-col1">
+                <h3>download our app</h3>
+                <p>download tehe aap for androidn and appp</p>
+                <div class="applogo">
+                        <img src="play-store.png" alt="">
+                        <img src="app-store.png" alt="">
+                </div>
+            </div>
+            <div class="footer-col2">
+                <img src="logo-white.png" alt="" width="50%">
+                <p>our purpose is to sustainly make agews j</p>
+                
+            </div>
+            <div class="footer-col3">
+                <h3>usefull links</h3>
+                <ul>
+                    <li><a href="" >coupons</a></li>
+                    <li><a href="">blog port</a> </li>
+                    <li> <a href="">return policy</a> </li>
+                    <li> <a href="">join affilate </a></li>
+                </ul>
+            </div>
+            <div class="footer-col4">
+                <h3>follow us</h3>
+                <ul>
+                    <li><a href="" >facebook</a></li>
+                    <li><a href="">instagram</a> </li>
+                    <li> <a href="">twitter</a> </li>
+                   <li> <a href="">youtube </a></li>
+         </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">copyright 2020-easy </p>
+    </div>
+    </div>
+    <!--------------------js for toggle menu--------->
+    <script>
+       var menuitems = document.getElementById("menuitems");
+       menuitems.style.maxHeight = "0px";
+        
+        function menutoggle(){
+            if(menuitems.style.maxHeight == "0px")
+            {
+                menuitems.style.maxHeight = "200px";
+            }
+            else{
+                menuitems.style.maxHeight = "0px";
+            }
+        }
+
+    </script>
+
+    <!-----------js for toogle menu---->
+    <script>
+        var loginform = document.getElementById("loginform");
+        var regform = document.getElementById("regform");
+        var indicator = document.getElementById("indicator");
+
+        function register(){
+            
+            regform.style.transform="translateX(0px)";
+            loginform.style.transform="translateX(0px)";
+            indicator.style.transform="translateX(-96px)";
+        }
+        function login(){
+            
+            regform.style.transform="translateX(300px)";
+            loginform.style.transform="translateX(300px)";
+            indicator.style.transform="translateX(-210px)";
+        }
+
+
+    </script>
+</body>
+
+</html>
